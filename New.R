@@ -20,3 +20,25 @@ multiarray <- array(thisarray, dim = c(4, 3, 2))
 
 # Print the multi-dimensional array
 print(multiarray)
+
+sum_and_print <- function(x,y, verbose = F){
+  sum <- x + y
+  if (verbose){
+    cat("The sum of ", x, " and ", y, " is ", sum)
+  }
+  return (sum)
+}
+
+sum_and_print(1,2,T)
+
+
+First_function <- function(x) {
+  Second_function <- function(y) {
+    result <- x * y
+    return(result)
+  }
+  return (Second_function)
+}
+result_function = First_function(3)
+result = result_function(5)
+print(result)
